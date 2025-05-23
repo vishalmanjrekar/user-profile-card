@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Card</title>
+    <link rel="stylesheet" href="profile-card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <div class="avatar">
+            <img src="https://avatar.iran.liara.run/public/20" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <h2 class="full-name">John Doe</h2>
+            <p class="username">@johndoe</p>
+            <p class="bio">Product designer and developer. Passionate about creating beautiful and functional user experiences.</p>
+            <p class="location"><i class="fas fa-location-dot"></i> San Francisco, CA</p>
+            <button id="followBtn" class="follow-btn">Follow</button>
+        </div>
+    </div>
+
+    <script>
+        const followBtn = document.getElementById('followBtn');
+        let isFollowing = false;
+
+        followBtn.addEventListener('click', () => {
+            isFollowing = !isFollowing;
+            followBtn.textContent = isFollowing ? 'Following' : 'Follow';
+            followBtn.classList.toggle('following');
+        });
+    </script>
+</body>
+</html> 
